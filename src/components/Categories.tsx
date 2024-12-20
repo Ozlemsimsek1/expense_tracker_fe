@@ -154,7 +154,9 @@ function Categories() {
                 <Select
                   defaultValue="expense"
                   value={form.type}
-                  onChange={(type) => setForm({ ...form, type })}
+                  onChange={(value) =>
+                    setForm({ ...form, type: value as "expense" | "income" })
+                  }
                 >
                   <Select.Option value="income">Income</Select.Option>
                   <Select.Option value="expense">Expense</Select.Option>
